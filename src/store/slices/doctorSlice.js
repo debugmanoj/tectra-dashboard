@@ -63,7 +63,7 @@ const doctorSlice = createSlice({
   name: "doctors",
   initialState: initialState,
   reducers: {
-    // 🎯 Modal control reducers
+    //  Modal control reducers
     openDoctorModal: (state, action) => {
       state.isModalOpen = true;
       state.editingDoctor = action.payload || null;
