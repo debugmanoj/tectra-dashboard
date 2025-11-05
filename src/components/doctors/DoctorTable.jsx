@@ -28,6 +28,7 @@ const DoctorTable = ({ onEdit }) => {
         data={list}
         loading={loading}
         onEdit={onEdit}
+        showAction={true}
         onDelete={(id) => dispatch(deleteDoctor(id))}
       />
 

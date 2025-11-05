@@ -10,6 +10,7 @@ const DataTable = ({
   onDelete,
   loading,
   selectable = false,
+  showAction = false
 }) => {
   const [openMenu, setOpenMenu] = useState(null);
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
@@ -40,7 +41,7 @@ const DataTable = ({
 
   return (
     <div className="overflow-x-auto overflow-y-auto max-h-[300px] rounded-md relative">
-      <table className="w-full text-sm border-collapse text-left text-xs">
+      <table className="w-full  border-collapse text-left text-xs">
         <thead className="text-[#475467] font-medium bg-[#f9fbfb] sticky top-0 z-10 text-left">
           <tr>
             {selectable && (
@@ -53,7 +54,7 @@ const DataTable = ({
                 {col.label}
               </th>
             ))}
-            <th className="p-3">Action</th>
+           {showAction && <th className="p-3">Action</th>} 
           </tr>
         </thead>
 
@@ -84,7 +85,7 @@ const DataTable = ({
                 })}
 
                 {/* Action Menu Button */}
-                <td className="p-2 text-center">
+                {showAction && <td className="p-2 text-center">
                   <button
                     ref={buttonRef}
                     onClick={(e) => handleMenuToggle(row._id, e)}
@@ -92,7 +93,8 @@ const DataTable = ({
                   >
                     <HiDotsHorizontal size={18} />
                   </button>
-                </td>
+                </td>}
+
               </tr>
             ))
           ) : (
