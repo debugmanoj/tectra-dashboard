@@ -1,16 +1,31 @@
-# React + Vite
+#  Doctor Management Frontend (React.js + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the **frontend** of the Doctor Management System — a responsive web app built with **React.js** and **Vite** that allows users to manage doctors with full CRUD operations.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Features
+- Add, Edit, Delete, and View Doctors  
+- Cursor-based pagination  
+- Status management (Active / Inactive)  
+- Toast notifications via **React Hot Toast**  
+- Modular architecture with reusable components  
+- Connected to a live backend API deployed on **Vercel**
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+##  Tech Stack
+- **React.js (Vite)**
+- **Redux Toolkit** for state management  
+- **Formik + Yup** for form handling and validation  
+- **React Hot Toast** for alerts  
+- **Tailwind CSS** for styling  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  Setup Instructions
+
+###  Clone the repo
+```bash
+git clone https://github.com/manojkumar/doctor-management-frontend.git
+cd doctor-management-frontend
